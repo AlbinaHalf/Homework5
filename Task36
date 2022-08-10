@@ -1,0 +1,21 @@
+// Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях.
+
+Console.WriteLine("Enter the size of thr array");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] arr = new int[size];
+Random rand = new Random();
+for (int i = 0; i < arr.Length; i++)
+{
+    arr[i] = rand.Next(-5, 10);
+    }
+    Console.WriteLine('[' + string.Join(", ", arr) + ']');
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i % 2 ==1)
+        {
+            sum = sum + arr[i];
+        }
+    }
+    Console.WriteLine($"Summa = {sum}");
