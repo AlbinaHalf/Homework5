@@ -1,0 +1,22 @@
+// Задайте одномерный массив из 123 случайных чисел. 
+// Найдите количество элементов массива, значения которых 
+// лежат в отрезке [10,99].
+
+Console.WriteLine("Enter the size of the array");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] arr = new int[size];
+Random rand = new Random();
+for (int i = 0; i < arr.Length; i++)
+{
+    arr[i] = rand.Next(1, 300);
+    }
+    Console.WriteLine('[' + string.Join(", ", arr) + ']');
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] >= 10 && arr[i] <= 99 )
+        {
+            count++;
+        }
+    }
+    Console.WriteLine($"Elements in the array = {count}");
